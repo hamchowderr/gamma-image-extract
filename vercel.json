@@ -5,7 +5,7 @@
   "outputDirectory": "",
   "functions": {
     "api/convert.js": {
-      "maxDuration": 10
+      "maxDuration": 60
     }
   }
 }

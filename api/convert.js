@@ -57,7 +57,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { url, format = "png", quality = 85, scale = 1.5, maxPages = 3 } = req.body || {};
+    const { url, format = "png", quality = 85, scale = 2, maxPages } = req.body || {};
 
     if (!url) {
       return res.status(400).json({
@@ -128,7 +128,7 @@ export default async function handler(req, res) {
 
     const pdf = await loadingTask.promise;
     const numPages = pdf.numPages;
-    const pagesToRender = Math.min(numPages, maxPages);
+    const pagesToRender = maxPages ? Math.min(numPages, maxPages) : numPages;
     const pages = [];
 
     for (let pageNum = 1; pageNum <= pagesToRender; pageNum++) {

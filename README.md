@@ -23,8 +23,8 @@ A serverless API that converts PDF pages to images, returning base64 data URLs. 
 | `url` | string | required | URL to the PDF file |
 | `format` | `"png"` \| `"jpg"` | `"png"` | Output image format |
 | `quality` | number | 85 | JPEG quality (1-100), ignored for PNG |
-| `scale` | number | 1.5 | Render scale (1.0 = 72 DPI) |
-| `maxPages` | number | 3 | Maximum pages to render |
+| `scale` | number | 2 | Render scale (1.0 = 72 DPI) |
+| `maxPages` | number | all | Optional limit on pages to render |
 
 ### Response
 
@@ -78,12 +78,11 @@ pnpm dev
 - **Canvas:** @napi-rs/canvas
 - **Image Processing:** sharp
 
-## Limits (Free Tier)
+## Limits
 
 - Max PDF size: 10MB
 - Download timeout: 8 seconds
-- Vercel function timeout: 10 seconds
-- Use `maxPages` parameter to limit pages for large PDFs
+- Function timeout: 60 seconds
 
 ## License
 
