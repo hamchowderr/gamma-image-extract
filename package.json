@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.84",
+    "pdfjs-dist": "2.16.105",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "@napi-rs/canvas"
+    ],
+    "overrides": {
+      "canvas": "npm:@napi-rs/canvas@^0.1.84"
+    }
+  }
+}
