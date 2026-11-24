@@ -7,7 +7,7 @@
   "dependencies": {
     "@napi-rs/canvas": "^0.1.84",
     "pdfjs-dist": "2.16.105",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@vercel/node": "^3.0.0"
