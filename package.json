@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@napi-rs/canvas": "^0.1.84",
-    "pdfjs-dist": "2.16.105",
+    "pdfjs-dist": "4.2.67",
     "sharp": "^0.34.5"
   },
   "devDependencies": {
